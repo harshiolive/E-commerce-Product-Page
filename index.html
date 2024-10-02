@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneakers Navbar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="#">sneakers</a>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+        <div class="cart">
+            <img
+              class="cart-icon"
+              src="icon-cart.svg"
+              alt="cart icon"
+            />
+            <div class="cart-icon">
+                <i class="fa fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <div class="cart-dropdown" id="cart-dropdown">
+                <h6 style="color:grey;text-align:center;">Cart</h6>
+                <hr>
+                <br>
+                <div id="cart-items">
+                </div>
+                <br>
+                <br>
+                <div class="cart-total">
+                    Total: $<span id="total-price">0</span>
+                </div>
+                <button class="checkout">Checkout</button>
+            </div>
+            <div class="cart-count">
+              <span class="qty"></span>
+            </div>
+          </div>
+      <a href="#"><img src="image-avatar.png" alt="Profile Icon" class="icon"></a>
+    </div>
+  </nav>
+  <main>
+    <section class="product">
+        <div class="product-images">
+            <img src="shoe1.png" alt="Main Sneaker Image" class="main-image">
+            <div class="thumbnail-images">
+                <img src="shoe1.png" alt="Sneaker 1" class="thumbnail">
+                <img src="shoe2.png" alt="Sneaker 2" class="thumbnail">
+                <img src="shoe3.png" alt="Sneaker 3" class="thumbnail">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1 style="color:orange;"><b>SNEAKER COMPANY</b></h1>
+            <br>
+            <h1 style="font-size:40px;"><B>Fall Limited Edition Sneakers</B></h1>
+            <br>
+            <p style="font-size:larger;color:gray">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+            <div class="price">
+                <span class="current-price">$125.00</span>
+                <span class="original-price">$250.00</span>
+                <span class="discount">50% off</span>
+            </div>
+            <div class="quantity-selector">
+                <button class="decrease" onclick="updateQuantity(-1)">-</button>
+                <span id="quantity">1</span>
+                <button class="increase" onclick="updateQuantity(1)">+</button>
+            </div>
+            <button class="add-to-cart" onclick="addToCart()">Add to cart</button>
+        </div>
+    </section>
+</main>
+<script src="cart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
